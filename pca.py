@@ -24,7 +24,6 @@ print(data_csv.keys()[max_comp])
 
 corr = np.corrcoef(data_csv, rowvar=False)
 corr_array = np.argwhere(np.abs(corr) < 0.002)
-for i in corr_array:
-    for j in i:
-        print(data_csv.keys()[j])
+for i in corr_array[0]:
+    print(data_csv.keys()[i])
 
